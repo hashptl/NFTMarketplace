@@ -43,11 +43,13 @@ export default function CreateItem() {
       description,
       image: fileUrl,
     });
+
     try {
       const added = await client.add(data);
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
 
       createSale(url);
+      console.log(url);
     } catch (error) {
       console.log('Error uploading file: ', error);
     }
@@ -108,7 +110,7 @@ export default function CreateItem() {
 
         <label
           className='text-md font-medium text-white block mb-2 mt-2'
-          for='user_avatar'>
+          htmlFor='user_avatar'>
           Upload file
         </label>
         <input

@@ -20,8 +20,10 @@ import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json';
 import { EditText, EditTextarea } from 'react-edit-text';
 import 'react-edit-text/dist/index.css';
 import { LoginContext } from '../context/LoginContext';
+
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
-export default function Perfil() {
+
+export default function Profile() {
   const { users, getUsers, userInfo, walletId, signer } =
     useContext(LoginContext);
   const inputFileRef = React.useRef();
@@ -307,7 +309,7 @@ export default function Perfil() {
               backgroundColor: '#18142c',
               height: '100px',
             }}
-            placeholder={userInfo.name ? userInfo.name : 'name'}
+            placeholder={userInfo.name ? userInfo.name : 'Name'}
             name='textbox2'
             onSave={onSetTextName}
             readonly={editable}
@@ -338,7 +340,7 @@ export default function Perfil() {
               height: '100px',
             }}
             placeholder={
-              userInfo.description ? userInfo.description : 'description'
+              userInfo.description ? userInfo.description : 'Description'
             }
             name='textbox3'
             onSave={onSetTextDescription}

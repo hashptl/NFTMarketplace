@@ -90,7 +90,7 @@ contract NFTMarket is ReentrancyGuard {
     uint256 tokenId,
     uint256 price
   ) public payable nonReentrant {
-    require(price > 0, "Preco tem que ser maior que 0");
+    require(price > 0, "Price must be greater than 0");
    
     _itemIds.increment();
     uint256 itemId = _itemIds.current();
@@ -118,27 +118,13 @@ contract NFTMarket is ReentrancyGuard {
     );
   }
 
-  
-  // function approve(address to, uint256 tokenId) public virtual override {
-  //       address owner = ERC721.ownerOf(tokenId);
-  //       require(to != owner, "ERC721: approval to current owner");
-
-  //       require(
-  //           _msgSender() == owner || isApprovedForAll(owner, _msgSender()),
-  //           "ERC721: approve caller is not owner nor approved for all"
-  //       );
-
-  //       _approve(to, tokenId);
-  //   }
-  
-  
   function createMarketSale(
     address nftContract,
     uint256 itemId
     ) public payable nonReentrant {
     uint price = idToMarketItem[itemId].price;
     uint tokenId = idToMarketItem[itemId].tokenId;
-    require(msg.value == price, "Envie o valor certo da compra");
+    require(msg.value == price, "Compare the given value");
 
     idToMarketItem[itemId].seller.transfer(msg.value);
     IERC721(nftContract).transferFrom(address(this), msg.sender, tokenId);

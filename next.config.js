@@ -3,8 +3,6 @@ module.exports = {
   env: {
     REACT_APP_apiKey: "AIzaSyBxJ8AdkI0F2NdbYYpN3zlxbsB3XTV97hA",
     REACT_APP_authDomain: "nft-marketplace-ae346.firebaseapp.com",
-    REACT_APP_apiKey: "AIzaSyBxJ8AdkI0F2NdbYYpN3zlxbsB3XTV97hA",
-    REACT_APP_authDomain: "nft-marketplace-ae346.firebaseapp.com",
     REACT_APP_projectId: "nft-marketplace-ae346",
     REACT_APP_storageBucket: "nft-marketplace-ae346.appspot.com",
     REACT_APP_messagingSenderId: "447689832368",

@@ -62,7 +62,6 @@ export default function MyAssets() {
     const connection = await web3Modal.connect();
 
     const provider = new ethers.providers.Web3Provider(connection);
-    //coleta a assinatura para validar a transação
 
     const marketContract = new ethers.Contract(
       nftmarketaddress,
