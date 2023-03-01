@@ -20,7 +20,7 @@
     "firebase": "^9.5.0",
     "hardhat": "^2.6.8",
     "ipfs-http-client": "^50.1.2",
-    "next": "11.0.1",
+    "next": "13.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-edit-text": "^4.2.0",
